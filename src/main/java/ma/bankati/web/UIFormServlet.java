@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 public class UIFormServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType("text/plain");
+        /*response.setContentType("text/plain");
         PrintWriter out = response.getWriter();
         out.println("Nom : " + request.getParameter("nom"));
         out.println("Prenom : "+ request.getParameter("prenom"));
@@ -23,7 +23,8 @@ public class UIFormServlet extends HttpServlet {
             out.print("C'est une femme. Elle");
 
         out.print(" a ecrit : ");
-        out.println(request.getParameter("textarea"));
+        out.println(request.getParameter("textarea"));*/
+        request.getRequestDispatcher("reponse.jsp").forward(request,response);
 
     }
 }
